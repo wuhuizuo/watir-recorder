@@ -22,7 +22,7 @@ namespace WatirRecorder
 	/// </summary>
 	public class frmMain : Form
 	{
-		private const string fileDialogFilter = "Ruby files (*.rb)|*.ware|All files (*.*)|*.*";
+		private const string fileDialogFilter = "Ruby files (*.rb)|*.rb";
 
 		private FontDialog fontDialog1;
 		private ContextMenu contextMenu1;
@@ -61,14 +61,22 @@ namespace WatirRecorder
 
 
 		public const string starterProject = 
-			"require 'rubygems'\r\n" + 
+			"require 'rubygems'\r\n" +
 			"require 'watir'\r\n" +
+			"require 'watir/contrib/ie-new-process'\r\n" +
 			"require 'win32ole'\r\n" +
-			"require 'test/unit'\r\n" + 
-			"include Watir\r\n" + 
-			"class TC_recorded < Test::Unit::TestCase\r\n" + 
-			"\tdef test_recorded\r\n" + 
-			"\t\tie = IE.new";
+			"require 'test/unit'\r\n" +
+			"require 'ci/reporter/rake/test_unit_loader'\r\n" +
+			"include Watir\r\n" +
+			"\r\n" +
+			"class TestCase_REPLACE < Test::Unit::TestCase\r\n" +
+			"	def setup\r\n" +
+			"		@ie = Watir::IE.new\r\n" +
+			"	end\r\n" +
+			"	def teardown\r\n" +
+			"		@ie.close\r\n" +
+			"	end\r\n" +
+			"	def test_REPLACE";
  
 		public const string endProject = 
 			"\tend\r\n" + 
@@ -719,7 +727,7 @@ namespace WatirRecorder
 		{
 			suppress = true;
 		}
-
+		// TODO: Pull to Mono
 		private void ie_BeforeNavigate2(object pDisp, ref object URL, ref object Flags, ref object TargetFrameName, ref object PostData, ref object Headers, ref bool Cancel)
 		{
 			LogEvent("Before Navigate");
@@ -731,7 +739,7 @@ namespace WatirRecorder
 			//Ignore iframe navigations...
 			if(URL.ToString().StartsWith("about:") == false && TargetFrameName == null)
 			{
-				AppendText(string.Format("ie.goto('{0}')",URL.ToString().Replace("'",@"\'")));
+				AppendText(string.Format("@ie.goto('{0}')",URL.ToString().Replace("'",@"\'")));
 			}
 		}
 
@@ -935,7 +943,7 @@ For more information visit his blog at http://www.ComputerZen.com
 		{
 			StartNewRecording();
 		}
-
+		// TODO: Pull this for Mono
 		private void StartNewRecording()
 		{
 			if (this.recordButton.Text == "Start")
@@ -1061,5 +1069,6 @@ For more information visit his great blog at http://www.ComputerZen.com
         {
             this.SaveStandardOutput();
         }
+        
 	}
 }
