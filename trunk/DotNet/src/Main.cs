@@ -38,7 +38,7 @@ namespace WatirRecorder
 		private DockContainer rightSandDock;
 		private DockContainer bottomSandDock;
 		private DockContainer topSandDock;
-		private ToolBar toolBar1;
+		private TD.SandBar.ToolBar toolBar1;
 		private ButtonItem buttonOpen;
 		private ButtonItem saveButton;
 		private ButtonItem aboutButton;
@@ -160,433 +160,429 @@ namespace WatirRecorder
 		/// </summary>
 		private void InitializeComponent()
 		{
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
-            this.contextMenu1 = new System.Windows.Forms.ContextMenu();
-            this.setFontMenuItem = new System.Windows.Forms.MenuItem();
-            this.openMenuItem = new System.Windows.Forms.MenuItem();
-            this.saveMenuItem = new System.Windows.Forms.MenuItem();
-            this.fontDialog1 = new System.Windows.Forms.FontDialog();
-            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
-            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.statusBar1 = new System.Windows.Forms.StatusBar();
-            this.statusBarPanel1 = new System.Windows.Forms.StatusBarPanel();
-            this.sandDockManager1 = new TD.SandDock.SandDockManager();
-            this.leftSandDock = new TD.SandDock.DockContainer();
-            this.rightSandDock = new TD.SandDock.DockContainer();
-            this.bottomSandDock = new TD.SandDock.DockContainer();
-            this.topSandDock = new TD.SandDock.DockContainer();
-            this.toolBar1 = new TD.SandBar.ToolBar();
-            this.buttonOpen = new TD.SandBar.ButtonItem();
-            this.saveButton = new TD.SandBar.ButtonItem();
-            this.recordButton = new TD.SandBar.ButtonItem();
-            this.assertButton = new TD.SandBar.ButtonItem();
-            this.playbackButton = new TD.SandBar.ButtonItem();
-            this.dropDownMenuItem1 = new TD.SandBar.DropDownMenuItem();
-            this.menuButtonItem2 = new TD.SandBar.MenuButtonItem();
-            this.menuButtonItem5 = new TD.SandBar.MenuButtonItem();
-            this.menuButtonItem6 = new TD.SandBar.MenuButtonItem();
-            this.menuButtonItem3 = new TD.SandBar.MenuButtonItem();
-            this.menuButtonItem4 = new TD.SandBar.MenuButtonItem();
-            this.menuButtonItem1 = new TD.SandBar.MenuButtonItem();
-            this.aboutButton = new TD.SandBar.ButtonItem();
-            this.documentContainer1 = new TD.SandDock.DocumentContainer();
-            this.dockControl1 = new TD.SandDock.DockControl();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.textScript = new System.Windows.Forms.RichTextBox();
-            this.splitter1 = new System.Windows.Forms.Splitter();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.lstEvents = new System.Windows.Forms.ListBox();
-            this.dockControlOutput = new TD.SandDock.DockControl();
-            this.rtbStdOutLog = new System.Windows.Forms.RichTextBox();
-            this.btnClear = new System.Windows.Forms.Button();
-            this.btnSaveLog = new System.Windows.Forms.Button();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            ((System.ComponentModel.ISupportInitialize)(this.statusBarPanel1)).BeginInit();
-            this.documentContainer1.SuspendLayout();
-            this.dockControl1.SuspendLayout();
-            this.panel1.SuspendLayout();
-            this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
-            this.dockControlOutput.SuspendLayout();
-            this.groupBox3.SuspendLayout();
-            this.SuspendLayout();
-            // 
-            // contextMenu1
-            // 
-            this.contextMenu1.MenuItems.AddRange(new System.Windows.Forms.MenuItem[] {
-            this.setFontMenuItem,
-            this.openMenuItem,
-            this.saveMenuItem});
-            // 
-            // setFontMenuItem
-            // 
-            this.setFontMenuItem.Index = 0;
-            this.setFontMenuItem.Text = "Set Font...";
-            this.setFontMenuItem.Click += new System.EventHandler(this.setFontMenuItem_Click);
-            // 
-            // openMenuItem
-            // 
-            this.openMenuItem.Index = 1;
-            this.openMenuItem.Text = "Open...";
-            this.openMenuItem.Click += new System.EventHandler(this.openMenuItem_Click);
-            // 
-            // saveMenuItem
-            // 
-            this.saveMenuItem.Index = 2;
-            this.saveMenuItem.Text = "Save...";
-            this.saveMenuItem.Click += new System.EventHandler(this.saveMenuItem_Click);
-            // 
-            // statusBar1
-            // 
-            this.statusBar1.Location = new System.Drawing.Point(0, 583);
-            this.statusBar1.Name = "statusBar1";
-            this.statusBar1.Panels.AddRange(new System.Windows.Forms.StatusBarPanel[] {
-            this.statusBarPanel1});
-            this.statusBar1.ShowPanels = true;
-            this.statusBar1.Size = new System.Drawing.Size(608, 22);
-            this.statusBar1.TabIndex = 8;
-            // 
-            // statusBarPanel1
-            // 
-            this.statusBarPanel1.AutoSize = System.Windows.Forms.StatusBarPanelAutoSize.Spring;
-            this.statusBarPanel1.Name = "statusBarPanel1";
-            this.statusBarPanel1.Width = 592;
-            // 
-            // sandDockManager1
-            // 
-            this.sandDockManager1.OwnerForm = this;
-            // 
-            // leftSandDock
-            // 
-            this.leftSandDock.Dock = System.Windows.Forms.DockStyle.Left;
-            this.leftSandDock.Guid = new System.Guid("25ec745e-de38-4c1a-a783-53b829ea6734");
-            this.leftSandDock.LayoutSystem = new TD.SandDock.SplitLayoutSystem(250, 400);
-            this.leftSandDock.Location = new System.Drawing.Point(0, 0);
-            this.leftSandDock.Manager = this.sandDockManager1;
-            this.leftSandDock.Name = "leftSandDock";
-            this.leftSandDock.Size = new System.Drawing.Size(0, 605);
-            this.leftSandDock.TabIndex = 10;
-            // 
-            // rightSandDock
-            // 
-            this.rightSandDock.Dock = System.Windows.Forms.DockStyle.Right;
-            this.rightSandDock.Guid = new System.Guid("c4aec7ed-9055-44f4-af3f-2ea35df51099");
-            this.rightSandDock.LayoutSystem = new TD.SandDock.SplitLayoutSystem(250, 400);
-            this.rightSandDock.Location = new System.Drawing.Point(608, 0);
-            this.rightSandDock.Manager = this.sandDockManager1;
-            this.rightSandDock.Name = "rightSandDock";
-            this.rightSandDock.Size = new System.Drawing.Size(0, 605);
-            this.rightSandDock.TabIndex = 11;
-            // 
-            // bottomSandDock
-            // 
-            this.bottomSandDock.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.bottomSandDock.Guid = new System.Guid("5196e983-c717-40e9-b223-368ca5f449f3");
-            this.bottomSandDock.LayoutSystem = new TD.SandDock.SplitLayoutSystem(250, 400);
-            this.bottomSandDock.Location = new System.Drawing.Point(0, 605);
-            this.bottomSandDock.Manager = this.sandDockManager1;
-            this.bottomSandDock.Name = "bottomSandDock";
-            this.bottomSandDock.Size = new System.Drawing.Size(608, 0);
-            this.bottomSandDock.TabIndex = 12;
-            // 
-            // topSandDock
-            // 
-            this.topSandDock.Dock = System.Windows.Forms.DockStyle.Top;
-            this.topSandDock.Guid = new System.Guid("c11b7c3d-b652-47b2-bf7d-0a72097ec98e");
-            this.topSandDock.LayoutSystem = new TD.SandDock.SplitLayoutSystem(250, 400);
-            this.topSandDock.Location = new System.Drawing.Point(0, 0);
-            this.topSandDock.Manager = this.sandDockManager1;
-            this.topSandDock.Name = "topSandDock";
-            this.topSandDock.Size = new System.Drawing.Size(608, 0);
-            this.topSandDock.TabIndex = 13;
-            // 
-            // toolBar1
-            // 
-            this.toolBar1.ContextMenu = this.contextMenu1;
-            this.toolBar1.FlipLastItem = true;
-            this.toolBar1.Guid = new System.Guid("a57ee27e-f5fa-4a3f-986a-cbe4264539d5");
-            this.toolBar1.Items.AddRange(new TD.SandBar.ToolbarItemBase[] {
-            this.buttonOpen,
-            this.saveButton,
-            this.recordButton,
-            this.assertButton,
-            this.playbackButton,
-            this.dropDownMenuItem1,
-            this.aboutButton});
-            this.toolBar1.Location = new System.Drawing.Point(0, 0);
-            this.toolBar1.Name = "toolBar1";
-            this.toolBar1.ShowShortcutsInToolTips = true;
-            this.toolBar1.Size = new System.Drawing.Size(608, 22);
-            this.toolBar1.TabIndex = 14;
-            this.toolBar1.Text = "";
-            this.toolBar1.TextAlign = TD.SandBar.ToolBarTextAlign.Underneath;
-            // 
-            // buttonOpen
-            // 
-            this.buttonOpen.IconSize = new System.Drawing.Size(32, 32);
-            this.buttonOpen.Text = "Open";
-            this.buttonOpen.ToolTipText = "Open";
-            this.buttonOpen.Activate += new System.EventHandler(this.buttonOpen_Activate);
-            // 
-            // saveButton
-            // 
-            this.saveButton.IconSize = new System.Drawing.Size(32, 32);
-            this.saveButton.Text = "Save";
-            this.saveButton.ToolTipText = "Save";
-            this.saveButton.Activate += new System.EventHandler(this.saveButton_Activate);
-            // 
-            // recordButton
-            // 
-            this.recordButton.BeginGroup = true;
-            this.recordButton.Text = "Start";
-            this.recordButton.ToolTipText = "Start";
-            this.recordButton.Activate += new System.EventHandler(this.recordButton_Activate);
-            // 
-            // assertButton
-            // 
-            this.assertButton.IconSize = new System.Drawing.Size(128, 128);
-            this.assertButton.Text = "Assert";
-            this.assertButton.ToolTipText = "Add assertion";
-            this.assertButton.Activate += new System.EventHandler(this.assertButton_Activate);
-            // 
-            // playbackButton
-            // 
-            this.playbackButton.Text = "Playback";
-            this.playbackButton.ToolTipText = "Playback";
-            this.playbackButton.Activate += new System.EventHandler(this.playbackButton_Activate);
-            // 
-            // dropDownMenuItem1
-            // 
-            this.dropDownMenuItem1.Items.AddRange(new TD.SandBar.ToolbarItemBase[] {
-            this.menuButtonItem2,
-            this.menuButtonItem3,
-            this.menuButtonItem4,
-            this.menuButtonItem1});
-            this.dropDownMenuItem1.Text = "Options";
-            this.dropDownMenuItem1.Visible = false;
-            // 
-            // menuButtonItem2
-            // 
-            this.menuButtonItem2.Items.AddRange(new TD.SandBar.ToolbarItemBase[] {
-            this.menuButtonItem5,
-            this.menuButtonItem6});
-            this.menuButtonItem2.Text = "Browser Selection";
-            // 
-            // menuButtonItem5
-            // 
-            this.menuButtonItem5.Text = "Firewatir: Mozilla Firefox";
-            // 
-            // menuButtonItem6
-            // 
-            this.menuButtonItem6.Text = "Watir: Internet Explorer";
-            // 
-            // menuButtonItem3
-            // 
-            this.menuButtonItem3.Text = "Watir Project Page";
-            // 
-            // menuButtonItem4
-            // 
-            this.menuButtonItem4.Text = "Ruby Project Page";
-            // 
-            // menuButtonItem1
-            // 
-            this.menuButtonItem1.BeginGroup = true;
-            this.menuButtonItem1.Text = "About...";
-            this.menuButtonItem1.Activate += new System.EventHandler(this.menuButtonItem1_Activate);
-            // 
-            // aboutButton
-            // 
-            this.aboutButton.BuddyMenu = this.menuButtonItem1;
-            this.aboutButton.IconSize = new System.Drawing.Size(32, 32);
-            this.aboutButton.Text = "About";
-            this.aboutButton.ToolTipText = "About";
-            this.aboutButton.Activate += new System.EventHandler(this.aboutButton_Activate);
-            // 
-            // documentContainer1
-            // 
-            this.documentContainer1.Controls.Add(this.dockControl1);
-            this.documentContainer1.Controls.Add(this.dockControlOutput);
-            this.documentContainer1.Guid = new System.Guid("a1f0db60-29b8-4f8c-b3ca-0613232ae52d");
-            this.documentContainer1.LayoutSystem = new TD.SandDock.SplitLayoutSystem(250, 400, System.Windows.Forms.Orientation.Horizontal, new TD.SandDock.LayoutSystemBase[] {
-            ((TD.SandDock.LayoutSystemBase)(new TD.SandDock.DocumentLayoutSystem(606, 559, new TD.SandDock.DockControl[] {
-                        this.dockControl1,
-                        this.dockControlOutput}, this.dockControl1)))});
-            this.documentContainer1.Location = new System.Drawing.Point(0, 22);
-            this.documentContainer1.Manager = null;
-            this.documentContainer1.Name = "documentContainer1";
-            this.documentContainer1.Renderer = new TD.SandDock.Rendering.Office2003Renderer();
-            this.documentContainer1.Size = new System.Drawing.Size(608, 561);
-            this.documentContainer1.TabIndex = 15;
-            this.documentContainer1.DragDrop += new System.Windows.Forms.DragEventHandler(this.textScript_DragDrop);
-            this.documentContainer1.DragEnter += new System.Windows.Forms.DragEventHandler(this.textScript_DragEnter);
-            // 
-            // dockControl1
-            // 
-            this.dockControl1.Controls.Add(this.panel1);
-            this.dockControl1.Guid = new System.Guid("804e5184-274f-4191-a3ab-346cf996384a");
-            this.dockControl1.Location = new System.Drawing.Point(5, 33);
-            this.dockControl1.Name = "dockControl1";
-            this.dockControl1.Size = new System.Drawing.Size(598, 523);
-            this.dockControl1.TabIndex = 0;
-            this.dockControl1.Text = "Recording";
-            this.dockControl1.Closing += new System.ComponentModel.CancelEventHandler(this.dockControl1_Closing);
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.groupBox1);
-            this.panel1.Controls.Add(this.splitter1);
-            this.panel1.Controls.Add(this.groupBox2);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(598, 523);
-            this.panel1.TabIndex = 8;
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.textScript);
-            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox1.Location = new System.Drawing.Point(0, 0);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(598, 384);
-            this.groupBox1.TabIndex = 4;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Watir Test Code";
-            this.groupBox1.DragOver += new System.Windows.Forms.DragEventHandler(this.textScript_DragEnter);
-            this.groupBox1.DragDrop += new System.Windows.Forms.DragEventHandler(this.textScript_DragDrop);
-            this.groupBox1.DragEnter += new System.Windows.Forms.DragEventHandler(this.textScript_DragEnter);
-            // 
-            // textScript
-            // 
-            this.textScript.AllowDrop = true;
-            this.textScript.ContextMenu = this.contextMenu1;
-            this.textScript.DetectUrls = false;
-            this.textScript.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textScript.Enabled = false;
-            this.textScript.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textScript.HideSelection = false;
-            this.textScript.Location = new System.Drawing.Point(3, 16);
-            this.textScript.Name = "textScript";
-            this.textScript.ReadOnly = true;
-            this.textScript.Size = new System.Drawing.Size(592, 365);
-            this.textScript.TabIndex = 1;
-            this.textScript.Text = "";
-            this.textScript.DragDrop += new System.Windows.Forms.DragEventHandler(this.textScript_DragDrop);
-            this.textScript.DragEnter += new System.Windows.Forms.DragEventHandler(this.textScript_DragEnter);
-            // 
-            // splitter1
-            // 
-            this.splitter1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.splitter1.Location = new System.Drawing.Point(0, 384);
-            this.splitter1.Name = "splitter1";
-            this.splitter1.Size = new System.Drawing.Size(598, 3);
-            this.splitter1.TabIndex = 6;
-            this.splitter1.TabStop = false;
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.lstEvents);
-            this.groupBox2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.groupBox2.Location = new System.Drawing.Point(0, 387);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(598, 136);
-            this.groupBox2.TabIndex = 5;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Events";
-            // 
-            // lstEvents
-            // 
-            this.lstEvents.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lstEvents.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lstEvents.IntegralHeight = false;
-            this.lstEvents.ItemHeight = 16;
-            this.lstEvents.Location = new System.Drawing.Point(3, 16);
-            this.lstEvents.Name = "lstEvents";
-            this.lstEvents.Size = new System.Drawing.Size(592, 117);
-            this.lstEvents.TabIndex = 2;
-            // 
-            // dockControlOutput
-            // 
-            this.dockControlOutput.Controls.Add(this.groupBox3);
-            this.dockControlOutput.Controls.Add(this.btnSaveLog);
-            this.dockControlOutput.Controls.Add(this.btnClear);
-            this.dockControlOutput.Guid = new System.Guid("e4b3c490-2cd9-4436-a969-ac697467fb4a");
-            this.dockControlOutput.Location = new System.Drawing.Point(5, 33);
-            this.dockControlOutput.Name = "dockControlOutput";
-            this.dockControlOutput.Size = new System.Drawing.Size(598, 523);
-            this.dockControlOutput.TabIndex = 1;
-            this.dockControlOutput.Text = "Standard Output Log";
-            // 
-            // rtbStdOutLog
-            // 
-            this.rtbStdOutLog.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.rtbStdOutLog.Enabled = false;
-            this.rtbStdOutLog.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.rtbStdOutLog.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.rtbStdOutLog.Location = new System.Drawing.Point(3, 16);
-            this.rtbStdOutLog.Name = "rtbStdOutLog";
-            this.rtbStdOutLog.ReadOnly = true;
-            this.rtbStdOutLog.Size = new System.Drawing.Size(597, 441);
-            this.rtbStdOutLog.TabIndex = 0;
-            this.rtbStdOutLog.Text = "";
-            // 
-            // btnClear
-            // 
-            this.btnClear.Location = new System.Drawing.Point(516, 466);
-            this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(75, 23);
-            this.btnClear.TabIndex = 1;
-            this.btnClear.Text = "Clear";
-            this.btnClear.UseVisualStyleBackColor = true;
-            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
-            // 
-            // btnSaveLog
-            // 
-            this.btnSaveLog.Location = new System.Drawing.Point(435, 466);
-            this.btnSaveLog.Name = "btnSaveLog";
-            this.btnSaveLog.Size = new System.Drawing.Size(75, 23);
-            this.btnSaveLog.TabIndex = 2;
-            this.btnSaveLog.Text = "Save Log";
-            this.btnSaveLog.UseVisualStyleBackColor = true;
-            this.btnSaveLog.Click += new System.EventHandler(this.btnSaveLog_Click);
-            // 
-            // groupBox3
-            // 
-            this.groupBox3.Controls.Add(this.rtbStdOutLog);
-            this.groupBox3.Location = new System.Drawing.Point(0, 0);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(603, 460);
-            this.groupBox3.TabIndex = 3;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Standard Output";
-            // 
-            // frmMain
-            // 
-            this.AccessibleName = "WatirRecorder++";
-            this.AutoScaleBaseSize = new System.Drawing.Size(5, 13);
-            this.ClientSize = new System.Drawing.Size(608, 605);
-            this.Controls.Add(this.documentContainer1);
-            this.Controls.Add(this.toolBar1);
-            this.Controls.Add(this.statusBar1);
-            this.Controls.Add(this.leftSandDock);
-            this.Controls.Add(this.rightSandDock);
-            this.Controls.Add(this.bottomSandDock);
-            this.Controls.Add(this.topSandDock);
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "frmMain";
-            this.Text = "WatirRecorder++";
-            this.Load += new System.EventHandler(this.frmMain_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.statusBarPanel1)).EndInit();
-            this.documentContainer1.ResumeLayout(false);
-            this.dockControl1.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox2.ResumeLayout(false);
-            this.dockControlOutput.ResumeLayout(false);
-            this.groupBox3.ResumeLayout(false);
-            this.ResumeLayout(false);
-
+			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
+			this.contextMenu1 = new System.Windows.Forms.ContextMenu();
+			this.setFontMenuItem = new System.Windows.Forms.MenuItem();
+			this.openMenuItem = new System.Windows.Forms.MenuItem();
+			this.saveMenuItem = new System.Windows.Forms.MenuItem();
+			this.fontDialog1 = new System.Windows.Forms.FontDialog();
+			this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
+			this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+			this.statusBar1 = new System.Windows.Forms.StatusBar();
+			this.statusBarPanel1 = new System.Windows.Forms.StatusBarPanel();
+			this.sandDockManager1 = new TD.SandDock.SandDockManager();
+			this.leftSandDock = new TD.SandDock.DockContainer();
+			this.rightSandDock = new TD.SandDock.DockContainer();
+			this.bottomSandDock = new TD.SandDock.DockContainer();
+			this.topSandDock = new TD.SandDock.DockContainer();
+			this.toolBar1 = new TD.SandBar.ToolBar();
+			this.buttonOpen = new TD.SandBar.ButtonItem();
+			this.saveButton = new TD.SandBar.ButtonItem();
+			this.recordButton = new TD.SandBar.ButtonItem();
+			this.assertButton = new TD.SandBar.ButtonItem();
+			this.playbackButton = new TD.SandBar.ButtonItem();
+			this.dropDownMenuItem1 = new TD.SandBar.DropDownMenuItem();
+			this.menuButtonItem2 = new TD.SandBar.MenuButtonItem();
+			this.menuButtonItem5 = new TD.SandBar.MenuButtonItem();
+			this.menuButtonItem6 = new TD.SandBar.MenuButtonItem();
+			this.menuButtonItem3 = new TD.SandBar.MenuButtonItem();
+			this.menuButtonItem4 = new TD.SandBar.MenuButtonItem();
+			this.menuButtonItem1 = new TD.SandBar.MenuButtonItem();
+			this.aboutButton = new TD.SandBar.ButtonItem();
+			this.documentContainer1 = new TD.SandDock.DocumentContainer();
+			this.dockControl1 = new TD.SandDock.DockControl();
+			this.panel1 = new System.Windows.Forms.Panel();
+			this.groupBox1 = new System.Windows.Forms.GroupBox();
+			this.textScript = new System.Windows.Forms.RichTextBox();
+			this.splitter1 = new System.Windows.Forms.Splitter();
+			this.groupBox2 = new System.Windows.Forms.GroupBox();
+			this.lstEvents = new System.Windows.Forms.ListBox();
+			this.dockControlOutput = new TD.SandDock.DockControl();
+			this.groupBox3 = new System.Windows.Forms.GroupBox();
+			this.rtbStdOutLog = new System.Windows.Forms.RichTextBox();
+			this.btnSaveLog = new System.Windows.Forms.Button();
+			this.btnClear = new System.Windows.Forms.Button();
+			((System.ComponentModel.ISupportInitialize)(this.statusBarPanel1)).BeginInit();
+			this.documentContainer1.SuspendLayout();
+			this.dockControl1.SuspendLayout();
+			this.panel1.SuspendLayout();
+			this.groupBox1.SuspendLayout();
+			this.groupBox2.SuspendLayout();
+			this.dockControlOutput.SuspendLayout();
+			this.groupBox3.SuspendLayout();
+			this.SuspendLayout();
+			// 
+			// contextMenu1
+			// 
+			this.contextMenu1.MenuItems.AddRange(new System.Windows.Forms.MenuItem[] {
+									this.setFontMenuItem,
+									this.openMenuItem,
+									this.saveMenuItem});
+			// 
+			// setFontMenuItem
+			// 
+			this.setFontMenuItem.Index = 0;
+			this.setFontMenuItem.Text = "Set Font...";
+			this.setFontMenuItem.Click += new System.EventHandler(this.setFontMenuItem_Click);
+			// 
+			// openMenuItem
+			// 
+			this.openMenuItem.Index = 1;
+			this.openMenuItem.Text = "Open...";
+			this.openMenuItem.Click += new System.EventHandler(this.openMenuItem_Click);
+			// 
+			// saveMenuItem
+			// 
+			this.saveMenuItem.Index = 2;
+			this.saveMenuItem.Text = "Save...";
+			this.saveMenuItem.Click += new System.EventHandler(this.saveMenuItem_Click);
+			// 
+			// statusBar1
+			// 
+			this.statusBar1.Location = new System.Drawing.Point(0, 583);
+			this.statusBar1.Name = "statusBar1";
+			this.statusBar1.Panels.AddRange(new System.Windows.Forms.StatusBarPanel[] {
+									this.statusBarPanel1});
+			this.statusBar1.ShowPanels = true;
+			this.statusBar1.Size = new System.Drawing.Size(608, 22);
+			this.statusBar1.TabIndex = 8;
+			// 
+			// statusBarPanel1
+			// 
+			this.statusBarPanel1.AutoSize = System.Windows.Forms.StatusBarPanelAutoSize.Spring;
+			this.statusBarPanel1.Name = "statusBarPanel1";
+			this.statusBarPanel1.Width = 592;
+			// 
+			// sandDockManager1
+			// 
+			this.sandDockManager1.OwnerForm = this;
+			// 
+			// leftSandDock
+			// 
+			this.leftSandDock.Dock = System.Windows.Forms.DockStyle.Left;
+			this.leftSandDock.Guid = new System.Guid("25ec745e-de38-4c1a-a783-53b829ea6734");
+			this.leftSandDock.LayoutSystem = new TD.SandDock.SplitLayoutSystem(250, 400);
+			this.leftSandDock.Location = new System.Drawing.Point(0, 0);
+			this.leftSandDock.Manager = this.sandDockManager1;
+			this.leftSandDock.Name = "leftSandDock";
+			this.leftSandDock.Size = new System.Drawing.Size(0, 605);
+			this.leftSandDock.TabIndex = 10;
+			// 
+			// rightSandDock
+			// 
+			this.rightSandDock.Dock = System.Windows.Forms.DockStyle.Right;
+			this.rightSandDock.Guid = new System.Guid("c4aec7ed-9055-44f4-af3f-2ea35df51099");
+			this.rightSandDock.LayoutSystem = new TD.SandDock.SplitLayoutSystem(250, 400);
+			this.rightSandDock.Location = new System.Drawing.Point(608, 0);
+			this.rightSandDock.Manager = this.sandDockManager1;
+			this.rightSandDock.Name = "rightSandDock";
+			this.rightSandDock.Size = new System.Drawing.Size(0, 605);
+			this.rightSandDock.TabIndex = 11;
+			// 
+			// bottomSandDock
+			// 
+			this.bottomSandDock.Dock = System.Windows.Forms.DockStyle.Bottom;
+			this.bottomSandDock.Guid = new System.Guid("5196e983-c717-40e9-b223-368ca5f449f3");
+			this.bottomSandDock.LayoutSystem = new TD.SandDock.SplitLayoutSystem(250, 400);
+			this.bottomSandDock.Location = new System.Drawing.Point(0, 605);
+			this.bottomSandDock.Manager = this.sandDockManager1;
+			this.bottomSandDock.Name = "bottomSandDock";
+			this.bottomSandDock.Size = new System.Drawing.Size(608, 0);
+			this.bottomSandDock.TabIndex = 12;
+			// 
+			// topSandDock
+			// 
+			this.topSandDock.Dock = System.Windows.Forms.DockStyle.Top;
+			this.topSandDock.Guid = new System.Guid("c11b7c3d-b652-47b2-bf7d-0a72097ec98e");
+			this.topSandDock.LayoutSystem = new TD.SandDock.SplitLayoutSystem(250, 400);
+			this.topSandDock.Location = new System.Drawing.Point(0, 0);
+			this.topSandDock.Manager = this.sandDockManager1;
+			this.topSandDock.Name = "topSandDock";
+			this.topSandDock.Size = new System.Drawing.Size(608, 0);
+			this.topSandDock.TabIndex = 13;
+			// 
+			// toolBar1
+			// 
+			this.toolBar1.ContextMenu = this.contextMenu1;
+			this.toolBar1.FlipLastItem = true;
+			this.toolBar1.Guid = new System.Guid("a57ee27e-f5fa-4a3f-986a-cbe4264539d5");
+			this.toolBar1.Items.AddRange(new TD.SandBar.ToolbarItemBase[] {
+									this.buttonOpen,
+									this.saveButton,
+									this.recordButton,
+									this.assertButton,
+									this.playbackButton,
+									this.dropDownMenuItem1,
+									this.aboutButton});
+			this.toolBar1.Location = new System.Drawing.Point(0, 0);
+			this.toolBar1.Name = "toolBar1";
+			this.toolBar1.ShowShortcutsInToolTips = true;
+			this.toolBar1.Size = new System.Drawing.Size(608, 22);
+			this.toolBar1.TabIndex = 14;
+			this.toolBar1.Text = "";
+			this.toolBar1.TextAlign = TD.SandBar.ToolBarTextAlign.Underneath;
+			// 
+			// buttonOpen
+			// 
+			this.buttonOpen.IconSize = new System.Drawing.Size(32, 32);
+			this.buttonOpen.Text = "Open";
+			this.buttonOpen.ToolTipText = "Open";
+			this.buttonOpen.Activate += new System.EventHandler(this.buttonOpen_Activate);
+			// 
+			// saveButton
+			// 
+			this.saveButton.IconSize = new System.Drawing.Size(32, 32);
+			this.saveButton.Text = "Save";
+			this.saveButton.ToolTipText = "Save";
+			this.saveButton.Activate += new System.EventHandler(this.saveButton_Activate);
+			// 
+			// recordButton
+			// 
+			this.recordButton.BeginGroup = true;
+			this.recordButton.Text = "Start";
+			this.recordButton.ToolTipText = "Start";
+			this.recordButton.Activate += new System.EventHandler(this.recordButton_Activate);
+			// 
+			// assertButton
+			// 
+			this.assertButton.IconSize = new System.Drawing.Size(128, 128);
+			this.assertButton.Text = "Assert";
+			this.assertButton.ToolTipText = "Add assertion";
+			this.assertButton.Activate += new System.EventHandler(this.assertButton_Activate);
+			// 
+			// playbackButton
+			// 
+			this.playbackButton.Text = "Playback";
+			this.playbackButton.ToolTipText = "Playback";
+			this.playbackButton.Activate += new System.EventHandler(this.playbackButton_Activate);
+			// 
+			// dropDownMenuItem1
+			// 
+			this.dropDownMenuItem1.Items.AddRange(new TD.SandBar.ToolbarItemBase[] {
+									this.menuButtonItem2,
+									this.menuButtonItem3,
+									this.menuButtonItem4,
+									this.menuButtonItem1});
+			this.dropDownMenuItem1.Text = "Options";
+			this.dropDownMenuItem1.Visible = false;
+			// 
+			// menuButtonItem2
+			// 
+			this.menuButtonItem2.Items.AddRange(new TD.SandBar.ToolbarItemBase[] {
+									this.menuButtonItem5,
+									this.menuButtonItem6});
+			this.menuButtonItem2.Text = "Browser Selection";
+			// 
+			// menuButtonItem5
+			// 
+			this.menuButtonItem5.Text = "Firewatir: Mozilla Firefox";
+			// 
+			// menuButtonItem6
+			// 
+			this.menuButtonItem6.Text = "Watir: Internet Explorer";
+			// 
+			// menuButtonItem3
+			// 
+			this.menuButtonItem3.Text = "Watir Project Page";
+			// 
+			// menuButtonItem4
+			// 
+			this.menuButtonItem4.Text = "Ruby Project Page";
+			// 
+			// menuButtonItem1
+			// 
+			this.menuButtonItem1.BeginGroup = true;
+			this.menuButtonItem1.Text = "About...";
+			this.menuButtonItem1.Activate += new System.EventHandler(this.menuButtonItem1_Activate);
+			// 
+			// aboutButton
+			// 
+			this.aboutButton.BuddyMenu = this.menuButtonItem1;
+			this.aboutButton.IconSize = new System.Drawing.Size(32, 32);
+			this.aboutButton.Text = "About";
+			this.aboutButton.ToolTipText = "About";
+			this.aboutButton.Activate += new System.EventHandler(this.aboutButton_Activate);
+			// 
+			// documentContainer1
+			// 
+			this.documentContainer1.Controls.Add(this.dockControl1);
+			this.documentContainer1.Controls.Add(this.dockControlOutput);
+			this.documentContainer1.Guid = new System.Guid("a1f0db60-29b8-4f8c-b3ca-0613232ae52d");
+			this.documentContainer1.LayoutSystem = new TD.SandDock.SplitLayoutSystem(250, 400, System.Windows.Forms.Orientation.Horizontal, new TD.SandDock.LayoutSystemBase[] {
+									((TD.SandDock.LayoutSystemBase)(new TD.SandDock.DocumentLayoutSystem(606, 559, new TD.SandDock.DockControl[] {
+																		this.dockControl1,
+																		this.dockControlOutput}, this.dockControl1)))});
+			this.documentContainer1.Location = new System.Drawing.Point(0, 22);
+			this.documentContainer1.Manager = null;
+			this.documentContainer1.Name = "documentContainer1";
+			this.documentContainer1.Renderer = new TD.SandDock.Rendering.Office2003Renderer();
+			this.documentContainer1.Size = new System.Drawing.Size(608, 561);
+			this.documentContainer1.TabIndex = 15;
+			this.documentContainer1.DragDrop += new System.Windows.Forms.DragEventHandler(this.textScript_DragDrop);
+			this.documentContainer1.DragEnter += new System.Windows.Forms.DragEventHandler(this.textScript_DragEnter);
+			// 
+			// dockControl1
+			// 
+			this.dockControl1.Controls.Add(this.panel1);
+			this.dockControl1.Guid = new System.Guid("804e5184-274f-4191-a3ab-346cf996384a");
+			this.dockControl1.Location = new System.Drawing.Point(5, 33);
+			this.dockControl1.Name = "dockControl1";
+			this.dockControl1.Size = new System.Drawing.Size(598, 523);
+			this.dockControl1.TabIndex = 0;
+			this.dockControl1.Text = "Recording";
+			this.dockControl1.Closing += new System.ComponentModel.CancelEventHandler(this.dockControl1_Closing);
+			// 
+			// panel1
+			// 
+			this.panel1.Controls.Add(this.groupBox1);
+			this.panel1.Controls.Add(this.splitter1);
+			this.panel1.Controls.Add(this.groupBox2);
+			this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.panel1.Location = new System.Drawing.Point(0, 0);
+			this.panel1.Name = "panel1";
+			this.panel1.Size = new System.Drawing.Size(598, 523);
+			this.panel1.TabIndex = 8;
+			// 
+			// groupBox1
+			// 
+			this.groupBox1.Controls.Add(this.textScript);
+			this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.groupBox1.Location = new System.Drawing.Point(0, 0);
+			this.groupBox1.Name = "groupBox1";
+			this.groupBox1.Size = new System.Drawing.Size(598, 384);
+			this.groupBox1.TabIndex = 4;
+			this.groupBox1.TabStop = false;
+			this.groupBox1.Text = "Watir Test Code";
+			this.groupBox1.DragOver += new System.Windows.Forms.DragEventHandler(this.textScript_DragEnter);
+			this.groupBox1.DragDrop += new System.Windows.Forms.DragEventHandler(this.textScript_DragDrop);
+			this.groupBox1.DragEnter += new System.Windows.Forms.DragEventHandler(this.textScript_DragEnter);
+			// 
+			// textScript
+			// 
+			this.textScript.AllowDrop = true;
+			this.textScript.ContextMenu = this.contextMenu1;
+			this.textScript.DetectUrls = false;
+			this.textScript.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.textScript.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.textScript.Location = new System.Drawing.Point(3, 16);
+			this.textScript.Name = "textScript";
+			this.textScript.Size = new System.Drawing.Size(592, 365);
+			this.textScript.TabIndex = 1;
+			this.textScript.Text = "";
+			this.textScript.DragDrop += new System.Windows.Forms.DragEventHandler(this.textScript_DragDrop);
+			this.textScript.DragEnter += new System.Windows.Forms.DragEventHandler(this.textScript_DragEnter);
+			// 
+			// splitter1
+			// 
+			this.splitter1.Dock = System.Windows.Forms.DockStyle.Bottom;
+			this.splitter1.Location = new System.Drawing.Point(0, 384);
+			this.splitter1.Name = "splitter1";
+			this.splitter1.Size = new System.Drawing.Size(598, 3);
+			this.splitter1.TabIndex = 6;
+			this.splitter1.TabStop = false;
+			// 
+			// groupBox2
+			// 
+			this.groupBox2.Controls.Add(this.lstEvents);
+			this.groupBox2.Dock = System.Windows.Forms.DockStyle.Bottom;
+			this.groupBox2.Location = new System.Drawing.Point(0, 387);
+			this.groupBox2.Name = "groupBox2";
+			this.groupBox2.Size = new System.Drawing.Size(598, 136);
+			this.groupBox2.TabIndex = 5;
+			this.groupBox2.TabStop = false;
+			this.groupBox2.Text = "Events";
+			// 
+			// lstEvents
+			// 
+			this.lstEvents.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.lstEvents.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lstEvents.IntegralHeight = false;
+			this.lstEvents.ItemHeight = 16;
+			this.lstEvents.Location = new System.Drawing.Point(3, 16);
+			this.lstEvents.Name = "lstEvents";
+			this.lstEvents.Size = new System.Drawing.Size(592, 117);
+			this.lstEvents.TabIndex = 2;
+			// 
+			// dockControlOutput
+			// 
+			this.dockControlOutput.Controls.Add(this.groupBox3);
+			this.dockControlOutput.Controls.Add(this.btnSaveLog);
+			this.dockControlOutput.Controls.Add(this.btnClear);
+			this.dockControlOutput.Guid = new System.Guid("e4b3c490-2cd9-4436-a969-ac697467fb4a");
+			this.dockControlOutput.Location = new System.Drawing.Point(5, 33);
+			this.dockControlOutput.Name = "dockControlOutput";
+			this.dockControlOutput.Size = new System.Drawing.Size(598, 523);
+			this.dockControlOutput.TabIndex = 1;
+			this.dockControlOutput.Text = "Standard Output Log";
+			// 
+			// groupBox3
+			// 
+			this.groupBox3.Controls.Add(this.rtbStdOutLog);
+			this.groupBox3.Location = new System.Drawing.Point(0, 0);
+			this.groupBox3.Name = "groupBox3";
+			this.groupBox3.Size = new System.Drawing.Size(603, 460);
+			this.groupBox3.TabIndex = 3;
+			this.groupBox3.TabStop = false;
+			this.groupBox3.Text = "Standard Output";
+			// 
+			// rtbStdOutLog
+			// 
+			this.rtbStdOutLog.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.rtbStdOutLog.Enabled = false;
+			this.rtbStdOutLog.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+			this.rtbStdOutLog.ForeColor = System.Drawing.SystemColors.Desktop;
+			this.rtbStdOutLog.Location = new System.Drawing.Point(3, 16);
+			this.rtbStdOutLog.Name = "rtbStdOutLog";
+			this.rtbStdOutLog.ReadOnly = true;
+			this.rtbStdOutLog.Size = new System.Drawing.Size(597, 441);
+			this.rtbStdOutLog.TabIndex = 0;
+			this.rtbStdOutLog.Text = "";
+			// 
+			// btnSaveLog
+			// 
+			this.btnSaveLog.Location = new System.Drawing.Point(435, 466);
+			this.btnSaveLog.Name = "btnSaveLog";
+			this.btnSaveLog.Size = new System.Drawing.Size(75, 23);
+			this.btnSaveLog.TabIndex = 2;
+			this.btnSaveLog.Text = "Save Log";
+			this.btnSaveLog.UseVisualStyleBackColor = true;
+			this.btnSaveLog.Click += new System.EventHandler(this.btnSaveLog_Click);
+			// 
+			// btnClear
+			// 
+			this.btnClear.Location = new System.Drawing.Point(516, 466);
+			this.btnClear.Name = "btnClear";
+			this.btnClear.Size = new System.Drawing.Size(75, 23);
+			this.btnClear.TabIndex = 1;
+			this.btnClear.Text = "Clear";
+			this.btnClear.UseVisualStyleBackColor = true;
+			this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
+			// 
+			// frmMain
+			// 
+			this.AccessibleName = "WatirRecorder#";
+			this.AutoScaleBaseSize = new System.Drawing.Size(5, 13);
+			this.ClientSize = new System.Drawing.Size(608, 605);
+			this.Controls.Add(this.documentContainer1);
+			this.Controls.Add(this.toolBar1);
+			this.Controls.Add(this.statusBar1);
+			this.Controls.Add(this.leftSandDock);
+			this.Controls.Add(this.rightSandDock);
+			this.Controls.Add(this.bottomSandDock);
+			this.Controls.Add(this.topSandDock);
+			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+			this.Name = "frmMain";
+			this.Text = "WatirRecorder#";
+			this.Load += new System.EventHandler(this.frmMain_Load);
+			((System.ComponentModel.ISupportInitialize)(this.statusBarPanel1)).EndInit();
+			this.documentContainer1.ResumeLayout(false);
+			this.dockControl1.ResumeLayout(false);
+			this.panel1.ResumeLayout(false);
+			this.groupBox1.ResumeLayout(false);
+			this.groupBox2.ResumeLayout(false);
+			this.dockControlOutput.ResumeLayout(false);
+			this.groupBox3.ResumeLayout(false);
+			this.ResumeLayout(false);
 		}
 		#endregion
 
@@ -1025,7 +1021,7 @@ For more information visit his blog at http://www.ComputerZen.com
 		private void menuButtonItem1_Activate(object sender, EventArgs e)
 		{
 			string aboutText = @"
-Watir Recorder++
+Watir Recorder#
 ----------------
 This Watir Recorder is based on Scott Hanselman's Watir Recorder.
 For more information visit his great blog at http://www.ComputerZen.com

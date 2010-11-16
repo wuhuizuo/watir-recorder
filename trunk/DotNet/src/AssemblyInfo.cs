@@ -6,12 +6,12 @@ using System.Runtime.CompilerServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 //
-[assembly: AssemblyTitle("WatirRecorder++")]
+[assembly: AssemblyTitle("WatirRecorder#")]
 [assembly: AssemblyDescription("Easily record Watir scripts using your browser")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("ComputerZen.com / RutgerSmit.com")]
-[assembly: AssemblyProduct("WatirRecorder++")]
-[assembly: AssemblyCopyright("Scott Hanselmann / Rutger Smit")]
+[assembly: AssemblyCompany("ComputerZen.com / RutgerSmit.com / LunaticBird.com")]
+[assembly: AssemblyProduct("WatirRecorder#")]
+[assembly: AssemblyCopyright("Scott Hanselmann / Rutger Smit / Enrique Matta")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]		
 
