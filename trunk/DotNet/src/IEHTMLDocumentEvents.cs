@@ -7,14 +7,13 @@ namespace WatirRecorder
 	{
         private bool isSelecting = false;
         private string assertion = null;
+		private frmMain formBackpointer = null;
+		private WatirMaker watirMaker = new WatirMaker();
 
 		public IEHTMLDocumentEvents(frmMain back)
 		{
 			formBackpointer = back;
 		}
-
-		private frmMain formBackpointer = null;
-		private WatirMaker watirMaker = new WatirMaker();
 
         public string GetAssertion()
         {
