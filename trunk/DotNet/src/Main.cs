@@ -71,10 +71,10 @@ namespace WatirRecorder
 			"\r\n" +
 			"class TestCase_REPLACE < Test::Unit::TestCase\r\n" +
 			"	def setup\r\n" +
-			"		@ie = Watir::IE.new\r\n" +
+			"		@browser = Watir::Browser.new\r\n" +
 			"	end\r\n" +
 			"	def teardown\r\n" +
-			"		@ie.close\r\n" +
+			"		@browser.close\r\n" +
 			"	end\r\n" +
 			"	def test_REPLACE";
  
@@ -719,6 +719,7 @@ namespace WatirRecorder
 		}
 
 		private bool suppress = false;
+		private bool firstTime = true;
 		public void SuppressOneGoto()
 		{
 			suppress = true;
@@ -733,9 +734,10 @@ namespace WatirRecorder
 				return;
 			}
 			//Ignore iframe navigations...
-			if(URL.ToString().StartsWith("about:") == false && TargetFrameName == null)
+			if(URL.ToString().StartsWith("about:") == false && TargetFrameName == null && firstTime == true)
 			{
-				AppendText(string.Format("@ie.goto('{0}')",URL.ToString().Replace("'",@"\'")));
+				AppendText(string.Format("@browser.goto('{0}')",URL.ToString().Replace("'",@"\'")));
+				firstTime = false;
 			}
 		}
 

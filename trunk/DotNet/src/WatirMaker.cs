@@ -11,7 +11,7 @@ namespace WatirRecorder
 		/// <returns></returns>
 		public string SetTextField(string how, string name, string val)
 		{
-			string setvalue = string.Format("@ie.text_field({0}, '{1}').set('{2}')",how,name,val.Replace("'",@"\'"));
+			string setvalue = string.Format("@browser.text_field({0}, '{1}').set('{2}')",how,name,val.Replace("'",@"\'"));
 			return setvalue;
 		}
 
@@ -26,9 +26,9 @@ namespace WatirRecorder
 		{
 			string setvalue = null;
 			if (val == "on")
-				setvalue = string.Format("@ie.checkbox({0}, '{1}').set()",how,name);
+				setvalue = string.Format("@browser.checkbox({0}, '{1}').set()",how,name);
 			else
-				setvalue = string.Format("@ie.checkbox({0}, '{1}').clear()",how,name);
+				setvalue = string.Format("@browser.checkbox({0}, '{1}').clear()",how,name);
 			return setvalue;
 		}
 
@@ -42,7 +42,7 @@ namespace WatirRecorder
 		public string Radio(string how, string name, string val)
 		{
 			string setvalue = null;
-			setvalue = string.Format("@ie.radio({0}, '{1}','{2}').set()",how,name,val.Replace("'",@"\'"));
+			setvalue = string.Format("@browser.radio({0}, '{1}','{2}').set()",how,name,val.Replace("'",@"\'"));
 			return setvalue;
 		}
 
@@ -56,7 +56,7 @@ namespace WatirRecorder
 		public string SelectList(string how, string name, string val)
 		{
 			string setvalue = null;
-			setvalue = string.Format("@ie.select_list({0}, '{1}').select_value('{2}')",how,name,val.Replace("'",@"\'"));
+			setvalue = string.Format("@browser.select_list({0}, '{1}').select_value('{2}')",how,name,val.Replace("'",@"\'"));
 			return setvalue;
 		}
 
@@ -68,7 +68,7 @@ namespace WatirRecorder
 		/// <returns></returns>
 		public string ClickLink(string how, string name)
 		{
-			string setvalue = string.Format("@ie.link({0}, '{1}').click",how,name.Replace("\r\n", ""));
+			string setvalue = string.Format("@browser.link({0}, '{1}').click",how,name.Replace("\r\n", ""));
 			return setvalue;
 		}
 
@@ -84,11 +84,11 @@ namespace WatirRecorder
 			string setvalue = null;
 			if (name != null)
 			{
-				setvalue = string.Format("@ie.button({0}, '{1}').click",how,name);
+				setvalue = string.Format("@browser.button({0}, '{1}').click",how,name);
 			}
 			else if (val != null)
 			{
-				setvalue = string.Format("@ie.button(:value, '{0}').click",val.Replace("'",@"\'"));
+				setvalue = string.Format("@browser.button(:value, '{0}').click",val.Replace("'",@"\'"));
 			}
 			return setvalue;
 		}
@@ -102,7 +102,7 @@ namespace WatirRecorder
         {
             string setvalue = null;
             assert = assert.Replace("\"", "\\\"");
-            setvalue = string.Format("assert(@ie.contains_text(\"{0}\"))", assert);
+            setvalue = string.Format("assert(@browser.contains_text(\"{0}\"))", assert);
             return setvalue;
         }
 	}
