@@ -6,6 +6,7 @@ using System.IO;
 using System.Runtime.InteropServices;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
+using System.Xml;
 using mshtml;
 using SHDocVw;
 using TD.SandBar;
@@ -60,27 +61,9 @@ namespace WatirRecorder
 		private GroupBox groupBox1;
 
 
-		public const string starterProject = 
-			"require 'rubygems'\r\n" +
-			"require 'watir'\r\n" +
-			"require 'watir/contrib/ie-new-process'\r\n" +
-			"require 'win32ole'\r\n" +
-			"require 'test/unit'\r\n" +
-			"require 'ci/reporter/rake/test_unit_loader'\r\n" +
-			"include Watir\r\n" +
-			"\r\n" +
-			"class TestCase_REPLACE < Test::Unit::TestCase\r\n" +
-			"	def setup\r\n" +
-			"		@browser = Watir::Browser.new\r\n" +
-			"	end\r\n" +
-			"	def teardown\r\n" +
-			"		@browser.close\r\n" +
-			"	end\r\n" +
-			"	def test_REPLACE";
+		public string starterProject = frmMain.configSetup();
  
-		public const string endProject = 
-			"\tend\r\n" + 
-			"end";
+		public string endProject = frmMain.configTearDown();
 
 		private int m_dwCookie = 0;  
 		private UCOMIConnectionPoint pConPt = null;  
@@ -1067,6 +1050,39 @@ For more information visit his great blog at http://www.ComputerZen.com
         {
             this.SaveStandardOutput();
         }
-        
+        public static string configSetup()
+        {
+        	string fileName = "config.xml";
+			XmlDocument doc = new XmlDocument();
+			XmlCDataSection cdataSection = null;
+			doc.Load(fileName);
+			XmlElement root = doc.DocumentElement;
+			XmlNode node = doc.DocumentElement.SelectSingleNode(
+			@"/options/start");
+			XmlNode childNode = node.ChildNodes[0];
+			if (childNode is XmlCDataSection)
+			{
+				cdataSection = childNode as XmlCDataSection;
+			}
+			string tmp = cdataSection.Value;
+			return cdataSection.Value;
+        }
+        public static string configTearDown()
+        {
+        	string fileName = "config.xml";
+			XmlDocument doc = new XmlDocument();
+			XmlCDataSection cdataSection = null;
+			doc.Load(fileName);
+			XmlElement root = doc.DocumentElement;
+			XmlNode node = doc.DocumentElement.SelectSingleNode(
+			@"/options/end");
+			XmlNode childNode = node.ChildNodes[0];
+			if (childNode is XmlCDataSection)
+			{
+				cdataSection = childNode as XmlCDataSection;
+			}
+			string tmp = cdataSection.Value;
+			return cdataSection.Value;
+        }
 	}
 }
