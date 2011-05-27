@@ -1,0 +1,12 @@
+This is a fork of the existing WATIR Recording tool Scott Hanselman created years ago
+
+The DotNet implementation is housed here so if anyone wants to work on the source code you can.
+
+The main focus will be the WatirRecorder.rb file that is under the folder.
+
+Current plans for WatirRecorder.rb file:
+1. wxruby UI
+2. Optimize code
+3. Refactor code for Firefox, IE, and eventually Chrome
+
+Looking for help, so if you have time I would greatly appreciate it.
